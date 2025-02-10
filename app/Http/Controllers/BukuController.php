@@ -12,9 +12,17 @@ use App\Models\Buku;
 
 class BukuController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $bukus = Buku::orderBy('created_at', 'desc')->paginate(10); // 10 buku per halaman
+        $search = $request->input('search');
+        
+        $bukus = Buku::when($search, function ($query, $search) {
+            return $query->where('judul', 'like', "%$search%")
+                         ->orWhere('penulis', 'like', "%$search%");
+        })
+        ->orderBy('created_at', 'desc') // Mengurutkan berdasarkan created_at terbaru
+        ->paginate(10);
+    
         return view('buku.index', compact('bukus'));
     }
 

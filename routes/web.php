@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +25,6 @@ Route::get('pelanggan/{pelanggan}', [PelangganController::class, 'show'])->name(
 // Route untuk Peminjaman
 Route::resource('peminjaman', PeminjamanController::class);
 Route::get('peminjaman/{peminjaman}', [PeminjamanController::class, 'show'])->name('peminjaman.show');
+
+// Route untuk Home
+Route::get('/', [HomeController::class, 'index'])->name('home');

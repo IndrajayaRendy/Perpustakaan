@@ -9,10 +9,21 @@ use App\Models\Buku;
 
 class PeminjamanController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $peminjamans = Peminjaman::with(['pelanggan', 'buku'])->latest()->paginate(5); // 5 data per halaman
-        return view('peminjaman.index', compact('peminjamans')); // Perbaiki compact()
+        $query = Peminjaman::with(['pelanggan', 'buku'])->orderBy('created_at', 'desc');
+    
+        if ($request->has('search')) {
+            $search = $request->search;
+            $query->whereHas('pelanggan', function ($q) use ($search) {
+                $q->where('nama', 'like', "%$search%");
+            })->orWhereHas('buku', function ($q) use ($search) {
+                $q->where('judul', 'like', "%$search%");
+            });
+        }
+    
+        $peminjamans = $query->paginate(10);
+        return view('peminjaman.index', compact('peminjamans'));
     }
 
     public function create()

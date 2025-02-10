@@ -4,6 +4,16 @@
 <div class="container">
     <h2>Daftar Pelanggan</h2>
     <a href="{{ route('pelanggan.create') }}" class="btn btn-primary">Tambah Pelanggan</a>
+
+    <form action="{{ route('pelanggan.index') }}" method="GET" class="mt-3">
+    <div class="input-group mb-3">
+        <input type="text" name="search" class="form-control" placeholder="Cari nama atau email..." value="{{ request('search') }}">
+        <button class="btn btn-outline-primary" type="submit">
+            <i class="fas fa-search"></i> <!-- Ikon pencarian -->
+        </button>
+    </div>
+    </form>
+
     <table class="table mt-3">
         <thead>
             <tr>

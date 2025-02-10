@@ -5,6 +5,15 @@
     <h2>Daftar Peminjaman</h2>
     <a href="{{ route('peminjaman.create') }}" class="btn btn-primary">Tambah Peminjaman</a>
 
+    <form action="{{ route('peminjaman.index') }}" method="GET" class="mt-3">
+    <div class="input-group mb-3">
+        <input type="text" name="search" class="form-control" placeholder="Cari pelanggan atau buku..." value="{{ request('search') }}">
+        <button class="btn btn-outline-primary" type="submit">
+            <i class="fas fa-search"></i> <!-- Ikon pencarian -->
+        </button>
+    </div>
+    </form>
+
     <table class="table mt-3">
         <thead>
             <tr>

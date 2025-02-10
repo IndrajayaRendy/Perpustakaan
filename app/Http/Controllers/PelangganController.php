@@ -8,9 +8,17 @@ use App\Models\Pelanggan;
 class PelangganController extends Controller
 {
     // Menampilkan daftar pelanggan
-    public function index()
+    public function index(Request $request)
     {
-        $pelanggans = Pelanggan::orderBy('created_at', 'desc')->paginate(5); // Batasi 5 pelanggan per halaman
+        $query = Pelanggan::query()->orderBy('created_at', 'desc');
+    
+        if ($request->has('search')) {
+            $search = $request->search;
+            $query->where('nama', 'like', "%$search%")
+                  ->orWhere('email', 'like', "%$search%");
+        }
+    
+        $pelanggans = $query->paginate(10);
         return view('pelanggan.index', compact('pelanggans'));
     }
     

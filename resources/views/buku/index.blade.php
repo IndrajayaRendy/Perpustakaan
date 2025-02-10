@@ -4,6 +4,17 @@
 <div class="container">
     <h2>Daftar Buku</h2>
     <a href="{{ route('buku.create') }}" class="btn btn-primary">Tambah Buku</a>
+
+    <!-- Formulir Pencarian -->
+    <form action="{{ route('buku.index') }}" method="GET" class="mt-3">
+    <div class="input-group mb-3">
+        <input type="text" name="search" class="form-control" placeholder="Cari judul atau penulis..." value="{{ request('search') }}">
+        <button class="btn btn-outline-primary" type="submit">
+            <i class="fas fa-search"></i> <!-- Ikon pencarian -->
+        </button>
+    </div>
+    </form>
+
     <table class="table mt-3">
         <thead>
             <tr>
