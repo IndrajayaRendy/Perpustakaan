@@ -9,7 +9,7 @@
             @csrf
 
             <div class="mb-3">
-                <label for="pelanggan_id" class="form-label fw-semibold"><i class="fas fa-user"></i> Pelanggan</label>
+                <label for="pelanggan_id" class="form-label fw-semibold"></i> Pelanggan</label>
                 <select name="pelanggan_id" class="form-select" required>
                     <option value="" selected disabled>Pilih Pelanggan</option>
                     @foreach($pelanggans as $pelanggan)
@@ -19,7 +19,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="buku_id" class="form-label fw-semibold"><i class="fas fa-book"></i> Buku</label>
+                <label for="buku_id" class="form-label fw-semibold"></i> Buku</label>
                 <select name="buku_id" class="form-select" required>
                     <option value="" selected disabled>Pilih Buku</option>
                     @foreach($buku as $b)
@@ -29,7 +29,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="tanggal_pinjam" class="form-label fw-semibold"><i class="fas fa-calendar-alt"></i> Tanggal Pinjam</label>
+                <label for="tanggal_pinjam" class="form-label fw-semibold"></i> Tanggal Pinjam</label>
                 <input type="date" name="tanggal_pinjam" class="form-control" required>
             </div>
 

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="card shadow-lg p-4">
-        <h2 class="fw-bold text-primary mb-3">Edit Peminjaman</h2>
+    <h2 class="fw-bold text-primary mb-3"><i class="fas fa-edit"></i> Edit Peminjaman</h2>
 
         @if ($errors->any())
             <div class="alert alert-danger">

@@ -12,22 +12,22 @@
                     @method('PUT')
 
                     <div class="mb-3">
-                        <label for="nama" class="form-label fw-bold"><i class="fas fa-user"></i> Nama</label>
+                        <label for="nama" class="form-label fw-bold"></i> Nama</label>
                         <input type="text" name="nama" class="form-control" value="{{ $pelanggan->nama }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" class="form-label fw-bold"><i class="fas fa-envelope"></i> Email</label>
+                        <label for="email" class="form-label fw-bold"></i> Email</label>
                         <input type="email" name="email" class="form-control" value="{{ $pelanggan->email }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="telepon" class="form-label fw-bold"><i class="fas fa-phone"></i> Telepon</label>
+                        <label for="telepon" class="form-label fw-bold"></i> Telepon</label>
                         <input type="text" name="telepon" class="form-control" value="{{ $pelanggan->telepon }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="alamat" class="form-label fw-bold"><i class="fas fa-map-marker-alt"></i> Alamat</label>
+                        <label for="alamat" class="form-label fw-bold"></i> Alamat</label>
                         <textarea name="alamat" class="form-control" required>{{ $pelanggan->alamat }}</textarea>
                     </div>
 

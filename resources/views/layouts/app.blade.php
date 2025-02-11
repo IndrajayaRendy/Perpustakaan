@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+
     <style>
         /* Navbar Styling */
         .navbar {
@@ -56,13 +58,25 @@
         }
 
         /* Footer Styling */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+        }
+
         footer {
             background: #4e54c8;
             color: white;
             text-align: center;
             padding: 15px;
-            margin-top: 40px;
             border-radius: 10px 10px 0 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -72,7 +86,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-            <i class="fas fa-scroll"></i> Aksara Library
+            <i class="fas fa-book-reader"></i> Aksara Library
 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

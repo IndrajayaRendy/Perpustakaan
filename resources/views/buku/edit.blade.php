@@ -12,27 +12,27 @@
                     @method('PUT')
 
                     <div class="mb-3">
-                        <label for="judul" class="form-label fw-bold"><i class="fas fa-book"></i> Judul Buku</label>
+                        <label for="judul" class="form-label fw-bold"></i> Judul Buku</label>
                         <input type="text" name="judul" class="form-control" value="{{ $buku->judul }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="penulis" class="form-label fw-bold"><i class="fas fa-pen"></i> Penulis</label>
+                        <label for="penulis" class="form-label fw-bold"></i> Penulis</label>
                         <input type="text" name="penulis" class="form-control" value="{{ $buku->penulis }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="penerbit" class="form-label fw-bold"><i class="fas fa-building"></i> Penerbit</label>
+                        <label for="penerbit" class="form-label fw-bold"></i> Penerbit</label>
                         <input type="text" name="penerbit" class="form-control" value="{{ $buku->penerbit }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="tahun_terbit" class="form-label fw-bold"><i class="fas fa-calendar"></i> Tahun Terbit</label>
+                        <label for="tahun_terbit" class="form-label fw-bold"></i> Tahun Terbit</label>
                         <input type="number" name="tahun_terbit" class="form-control" value="{{ $buku->tahun_terbit }}" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="stok" class="form-label fw-bold"><i class="fas fa-cubes"></i> Stok</label>
+                        <label for="stok" class="form-label fw-bold"></i> Stok</label>
                         <input type="number" name="stok" class="form-control" value="{{ $buku->stok }}" required>
                     </div>
 

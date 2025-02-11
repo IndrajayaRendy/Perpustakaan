@@ -11,22 +11,22 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="nama" class="form-label"><i class="fas fa-user"></i> Nama</label>
+                        <label for="nama" class="form-label fw-bold"></i> Nama</label>
                         <input type="text" name="nama" class="form-control" placeholder="Masukkan nama pelanggan" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                        <label for="email" class="form-label fw-bold"></i> Email</label>
                         <input type="email" name="email" class="form-control" placeholder="Masukkan email pelanggan" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="telepon" class="form-label"><i class="fas fa-phone"></i> Telepon</label>
+                        <label for="telepon" class="form-label fw-bold"></i> Telepon</label>
                         <input type="text" name="telepon" class="form-control" placeholder="Masukkan nomor telepon" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="alamat" class="form-label"><i class="fas fa-map-marker-alt"></i> Alamat</label>
+                        <label for="alamat" class="form-label fw-bold"></i> Alamat</label>
                         <textarea name="alamat" class="form-control" rows="3" placeholder="Masukkan alamat pelanggan" required></textarea>
                     </div>
 
